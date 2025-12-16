@@ -75,7 +75,7 @@ export async function applyClustering(geometry, algorithm, selectedLabel, parame
         case 'DBSCAN':
             res = await runDBSCAN(pointsToCluster, {
                 eps: parameters.dbscan.eps,
-                min_samples: parameters.dbscan.minPts,
+                min_samples: parameters.dbscan.min_pts,
                 metric: "euclidean",
             });
             clusters = res.clusters;
